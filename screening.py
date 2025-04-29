@@ -5,11 +5,11 @@ import datetime
 import mplfinance as mpf
 import yfinance as yf
 
-#ターゲットを指定(楽天)
-ticker = "4755.T"
+#ターゲットを指定(アゴーラ)
+ticker = "9704.T"
 
 #データを収集
-df = yf.download(ticker, period  = "6mo", interval = "1d")
+df = yf.download(ticker, period  = "1y", interval = "1d")
 
 #ARIMAモデル データ準備
 train_data, test_data = df[0:int(len(df)*0.7)], df[int(len(df)*0.7):]
